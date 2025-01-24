@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import Form from './components/Form';
 import TodoItemList from './components/TodoItemList';
 import TodoListTemplate from './components/TodoListTemplate';
@@ -50,9 +50,16 @@ class App extends Component {
     });
   };
 
+  handleRemove = (id) => {
+    const { todos } = this.state;
+    this.setState({
+      todos: todos.filter(todo => todo.id !== id)
+    });
+  };
+
   render() {
     const { todo, todos } = this.state;
-    const { handleChange, handleCreate, handleEnter, handleToggle } = this;
+    const { handleChange, handleCreate, handleEnter, handleToggle, handleRemove } = this;
 
     return (
       <TodoListTemplate form=
@@ -62,7 +69,9 @@ class App extends Component {
           myChange={handleChange}
           myCreate={handleCreate} />
         }>
-        <TodoItemList myTodos={todos} myToggle={handleToggle} />
+        <TodoItemList myTodos={todos} myToggle={handleToggle}
+          myRemove={handleRemove}
+         />
       </TodoListTemplate>
     );
   } //render
