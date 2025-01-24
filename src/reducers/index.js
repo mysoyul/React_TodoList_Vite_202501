@@ -11,6 +11,7 @@ const initialState = {
 }
 export const toDoReducer = (state = initialState, action) => {
     switch (action.type) {
+        case types.TOGGLE_TODO:
         case types.REMOVE_TODO:
         case types.ADD_TODO:
         case types.FETCH_TODOS:
