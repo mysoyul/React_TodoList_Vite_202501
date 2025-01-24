@@ -7,7 +7,8 @@ import App from './App.jsx'
 //import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
-import { toDoReducer } from './reducers';
+//import { toDoReducer } from './reducers';
+import todoSlice from '@/reducers/todoSlice';
 
 //const store = createStore(toDoReducer, applyMiddleware(thunk));
 /*
@@ -16,7 +17,8 @@ import { toDoReducer } from './reducers';
   - devtools 자동 연결
 */
 const store = configureStore({
-  reducer: toDoReducer,
+  //reducer: toDoReducer,
+  reducer: todoSlice
   //middleware: getDefaultMiddleware => getDefaultMiddleware().concat(thunk)
 });
 

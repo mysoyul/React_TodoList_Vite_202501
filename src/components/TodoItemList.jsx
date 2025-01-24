@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import TodoItem from './TodoItem';
 
 import { connect } from 'react-redux'
-import { fetchAllTodos } from '@/actions'
+//import { fetchAllTodos } from '@/actions'
+import { fetchAllTodos } from '@/reducers/todoSlice'
 
 class TodoItemList extends Component {
     componentDidMount() {

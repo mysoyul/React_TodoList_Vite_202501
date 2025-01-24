@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import './Form.css';
 
 import { connect } from 'react-redux';
-import { addTodo } from '@/actions';
+//import { addTodo } from '@/actions';
+import { addTodo } from '@/reducers/todoSlice';
 
 class Form extends Component {
     state = {

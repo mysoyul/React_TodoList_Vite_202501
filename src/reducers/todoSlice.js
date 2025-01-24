@@ -38,6 +38,7 @@ export const addTodo = createAsyncThunk(
     }
 );
 
+//State 객체
 const initialState = {
     todos: [
         {
