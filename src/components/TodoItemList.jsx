@@ -45,4 +45,7 @@ TodoItemList.propTypes = {
     myRemove: PropTypes.func,
     fetchAllTodos: PropTypes.func
 };
-export default TodoItemList;
+export default connect(
+    (state) => ({ myTodos:state.todos }),
+    { fetchAllTodos }
+)(TodoItemList);
